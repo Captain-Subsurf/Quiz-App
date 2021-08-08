@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Gowun Dodum', serif;
+}
+
+nav {
+    height: 10vh;
+    background-color: #1d3557;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+#next-question {
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    background: transparent;
+    border: 2px solid #a8dadc;
+    border-radius: 10px;
+    color: #a8dadc;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#next-question:hover {
+    transform: scale(1.1);
+}
+
+main {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.question-container, .options-container {
+    border: 2px solid #1d3557;
+    border-radius: 20px;
+    margin: 20px;
+    height: 50%;
+    width: 100%;
+    padding: 50px;
+}
+
+.question-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 100px;
+    flex: 1;
+}
+
+#question {
+    font-size: 2.4em;
+    color: #1d3557;
+}
+
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 50px;
+}
+
+.option-btn {
+    border: 2px solid #1d3557;
+    border-radius: 10px;
+    color: #1d3557;
+    background-color: white;
+    font-size: 2rem;
+    padding: 20px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.option-btn:hover {
+    color: white;
+    background: #1d3557;
+}
+
+.correct {
+    background: #06d6a0;
+    border-color: #06d6a0;
+    color: white;
+}
+
+.correct:hover {
+    background-color: #06d6a0;
+}
+
+.wrong {
+    background: #e63946;
+    border-color: #e63946;
+    color: white;
+}
+
+.wrong:hover {
+    background-color: #e63946;
+}
+
+@media (max-width: 700px) {
+    main {
+        min-height: 90vh;
+    }
+
+    .question-container {
+        height: 60%;
+        margin: 10px;
+        flex: 1;
+    }
+
+    #question {
+        font-size: 1.2rem;
+    } 
+
+    .options-container {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .option-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+}
